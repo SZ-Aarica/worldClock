@@ -1,6 +1,16 @@
 h1{
     text-align: center;
+  
+   
 }
+h1 a{
+    text-decoration: none;
+    color: black;
+}
+h1 a:hover{
+    color:#247291 ;
+}
+
 h2{
     margin: 0 0 10px;
     font-size: 28px;
@@ -39,6 +49,17 @@ select{
     font-size: 38px;
     font-weight: bolder;
 }
+@media (max-width: 426px){
+    .time{
+        font-size: 28px;
+        font-weight: 700;
+    }
+}
+@media (max-width: 426px){
+    .time small{
+        font-size: 9px;
+    }
+}
 .time small{
     font-size: 18px;
 }
@@ -48,7 +69,7 @@ footer{
     color: rgba(0, 0, 0, 0.632);
     
 }
-a{
+footer a{
     color: #247291;
 }
 .first-color { 
