@@ -1,13 +1,13 @@
 function cityClock(city,cityList){
     if( document.querySelector(`#${city}`)){
   let cityElement = document.querySelector(`#${city}`);
-    if(cityElement=== null){          
+          
     let cityDateElement = cityElement.querySelector(".date");
     let cityTimeElement = cityElement.querySelector(".time");
     cityDateElement.innerHTML = moment().tz(cityList).format("dddd Do yyyy");
     cityTimeElement.innerHTML = moment().tz(cityList).format("hh:mm:ss [<small>]A[</small>]");
     
-    }
+    
     }
 }
 
@@ -18,7 +18,11 @@ setInterval(() => cityClock("paris","Europe/Paris"), 1000);
 
 let citySelector = document.querySelector("#citySelector");
 citySelector.addEventListener("change" , (event)=>{
+   
     let cityTimeZone = event.target.value;
+    if (cityTimeZone == "current") {
+        cityTimeZone = moment.tz.guess();
+    }
     let cityName = cityTimeZone.replace("_" , " ").split("/")[1];
     console.log(cityName);
     let citiesContainerElement = document.querySelector("#citiesContainer");
