@@ -4,31 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1>World clock</h1>
 
-      <select name="" id="">
-        <option value="">select a city</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+      <select name="" id="citySelector">
+        <option value="">Select a City</option>
+        <option value="Europe/London">London</option>
+        <option value="America/New_York">New York</option>
+        <option value="Europe/Berlin">Berlin</option>
       </select>
-      <div class="cities">
-        <div>
-          <h2>Los Angles</h2>
-          <div class="date">may 2025</div>
+      <div id="citiesContainer">
+        <div class="cities" id="los-angles">
+          <div>
+            <h2>Los Angles</h2>
+            <div class="date">may 2025</div>
+          </div>
+          <div class="time"><small>AM</small></div>
         </div>
-        <div class="time">11:28:15 <small>AM</small></div>
-      </div>
-      <div class="cities">
-        <div>
-          <h2>Iran</h2>
-          <div class="date">may 2025</div>
+        <div class="cities" id="paris">
+          <div>
+            <h2 id="paris">Paris</h2>
+            <div class="date">may 2025</div>
+          </div>
+          <div class="time"><small>AM</small></div>
         </div>
-        <div class="time">11:28:15 <small>AM</small></div>
       </div>
     </div>
     <footer>
